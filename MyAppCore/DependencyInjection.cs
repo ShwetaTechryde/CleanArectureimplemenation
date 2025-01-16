@@ -10,7 +10,7 @@ namespace MyAppCore
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddAppCore(this IServiceCollection services)
+        public static IServiceCollection AddAppCoreId(this IServiceCollection services)
         {
             return services;
         }
