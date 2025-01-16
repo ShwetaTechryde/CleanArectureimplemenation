@@ -1,0 +1,6 @@
+@CleanArectureimplemenation_HostAddress = http://localhost:5225
+
+GET {{CleanArectureimplemenation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
