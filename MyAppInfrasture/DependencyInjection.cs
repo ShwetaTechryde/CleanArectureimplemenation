@@ -1,9 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MyAppInfrasture.Data;
 
 namespace MyAppInfrasture
 {
@@ -11,6 +8,8 @@ namespace MyAppInfrasture
     {
         public static IServiceCollection AddAppInfraId(this IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(Options=>
+            Options.UseSqlServer("Data Source =DESKTOP-APMVBAH; Initial Catalog = HealthCare; Integrated Security = True ; MultipleActiveResultSets=True; Encrypt =False\");"));
             return services;
         }
     }
